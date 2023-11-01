@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def islower(c):
     for i in c:
-        if 'a' <= i <= 'z':
+        if i.islower():
             return True
-        elif 'A' <= i <= 'Z':
+        else:
             return False
