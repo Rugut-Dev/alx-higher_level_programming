@@ -1,6 +1,6 @@
 ## ALX HIGHER LEVEL PROGRAMMING
 
-* Welcome to the **Higher Level Programming**!
+* Welcome to **Higher Level Programming**!
 * This repository is designed for learning Python and exploring higher-level
 programming concepts.
 
