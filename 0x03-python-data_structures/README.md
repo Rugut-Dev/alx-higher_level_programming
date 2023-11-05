@@ -126,14 +126,14 @@ Write a function that deletes the item at a specific position in a list
 * You are not allowed to use pop()
 * You are not allowed to import any module
 
-#### Switch
+#### 12. Switch
 Complete the source code in order to switch value of a and b
 
 * You can find the source code here
 * Your code should be inserted where the comment is (line 4)
 * Your program should be exactly 5 lines long
 
-#### Linked list palindrome
+#### 13. Linked list palindrome
 ##### Technical interview preparation
 
 * You are not allowed to google anything
