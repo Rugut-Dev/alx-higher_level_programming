@@ -6,7 +6,7 @@ def square_matrix_simple(matrix=[]):
 
     for lst in new_listof_lists:
         for i in lst:
-            sq = list(map(lambda i : i * i, lst))
+            sq = list(map(lambda i: i * i, lst))
         squared_lst.append(sq)
 
     return squared_lst
