@@ -7,7 +7,7 @@ programming concepts.
 ## Overview
 
 * This folder contains a collection of Python scripts, projects, and resources
-curated to aid your learning journey in Python, with a focus on higher-level
+curated to aid the learning journey in Python, with a focus on higher-level
 programming techniques.
 
 ## Getting Started
