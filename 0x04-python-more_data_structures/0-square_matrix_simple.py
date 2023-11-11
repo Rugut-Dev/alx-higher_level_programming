@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
 def square_matrix_simple(matrix=[]):
-    new_listof_lists = matrix.copy()
-    squared_lst = []
+    if matrix:
+        new_listof_lists = matrix.copy()
+        squared_lst = []
 
     for lst in new_listof_lists:
         for i in lst:
