@@ -8,13 +8,13 @@ class Square:
         self.__size = size
 
     @property
-    """getter for size"""
     def size(self):
+        """getter property for getting return from setter"""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """setter function with error checking"""
+        """setter function for value passed with error checking"""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
