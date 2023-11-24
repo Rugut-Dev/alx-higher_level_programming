@@ -1,0 +1,41 @@
+"""
+>>> add_integer = __import__('0-add_integer').add_integer
+
+# Int addition
+>>> add_integer(4, 100)
+104
+
+# Negative int addition
+>>> add_integer(-1, -1)
+-2
+
+# a is string
+>>> try:
+...     add_integer("hello", 4)
+... except Exception as e:
+...     str(e)
+'a must be an integer'
+
+# type None
+>>> try:
+...     add_integer(None)
+... except Exception as e:
+...     str(e)
+'a must be an integer'
+
+# b is string
+>>> try:
+...     add_integer(5, "bing")
+... except Exception as e:
+...     str(e)
+'b must be an integer'
+
+# a or b is float
+>>> add_integer(3.5, 2.5)
+5
+
+# one arg is passed
+>>> add_integer(2.5)
+100
+
+"""
