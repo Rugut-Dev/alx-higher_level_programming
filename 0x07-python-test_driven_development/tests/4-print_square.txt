@@ -1,0 +1,26 @@
+"""
+>>> print_square = __import__('4-print_square').print_square
+
+# Check if size is an int; otherwise raises Exception
+>>> try:
+...     print_square("b")
+... except TypeError as e:
+...     str(e)
+'size must be an integer'
+
+# Check if size is less than zero, if so, raise Exception
+>>> try:
+...     print_square(-4)
+... except ValueError as e:
+...     str(e)
+'size must be >= 0'
+
+# Check if size if both float and is less than 0, raise TypeError
+>>> try:
+...     print_square(-4.85)
+... except TypeError as e:
+...     str(e)
+'size must be an integer'
+
+# Check if None has been passed
+"""
