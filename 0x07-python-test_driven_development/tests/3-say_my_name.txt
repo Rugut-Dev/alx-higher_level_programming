@@ -1,0 +1,33 @@
+"""
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+# Checks first name if string
+>>> try:
+...     say_my_name(6, 'c')
+... except Exception as e:
+...     str(e)
+'first_name must be a string'
+
+# Check if second arg is string
+>>> say_my_name("John", "Fletcher")
+My name is John Fletcher
+
+# Pass one arg, and lastname defaults to an empty string
+>>> say_my_name("John")
+My name is John 
+
+# Checks if a None type is passed
+>>> try:
+...     say_my_name("John", None)
+... except TypeError as e:
+...     str(e)
+'last_name must be a string'
+
+# Checks if a None type is passed to first_name arg
+>>> try:
+...     say_my_name(None)
+... except TypeError as e:
+...     str(e)
+'first_name must be a string'
+
+"""
