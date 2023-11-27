@@ -48,8 +48,6 @@ class Rectangle:
     def __str__(self):
         if self.width == 0 or self.height == 0:
             return ""
-        elif isinstance(self.print_symbol, str):
-            return (str(self.print_symbol) * self.width + '\n') * self.height
         elif hasattr(self.print_symbol, '__iter__'):
             return ''.join(
                 [str(self.print_symbol) * self.width + '\n'] * self.height
