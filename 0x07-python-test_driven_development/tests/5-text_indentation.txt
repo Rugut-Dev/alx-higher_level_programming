@@ -1,0 +1,39 @@
+"""
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# Case scenario where text is int
+>>> try:
+...     text_indentation(23)
+... except TypeError as e:
+...     str(e)
+'text must be a string'
+
+# Case scenario where text is None
+>>> try:
+...     text_indentation(None)
+... except TypeError as e:
+...     str(e)
+'text must be a string'
+
+# '.:?' case
+>>> text_indentation("Hello Mr Bean.Potato: Was that a joke?")
+Hello Mr Bean.
+<BLANKLINE>
+Potato:
+<BLANKLINE>
+Was that a joke?
+<BLANKLINE>
+
+# "" case
+>>> text_indentation("")
+
+>>> text_indentation("Potato: Was that a joke?")
+Potato:
+<BLANKLINE>
+Was that a joke?
+<BLANKLINE>
+>>> text_indentation("Was that a joke?")
+Was that a joke?
+<BLANKLINE>
+
+"""
