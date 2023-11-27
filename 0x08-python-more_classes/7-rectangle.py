@@ -51,7 +51,8 @@ class Rectangle:
         rec_str = []
         for col in range(self.height):
             [rec_str.append(str(self.print_symbol)) for _ in range(self.width)]
-            rec_str.append("\n")
+            if col != self.height - 1:
+                rec_str.append("\n")
         return ''.join(rec_str)
 
     def __repr__(self):
