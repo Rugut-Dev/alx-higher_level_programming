@@ -48,10 +48,11 @@ class Rectangle:
     def __str__(self):
         if self.width == 0 or self.height == 0:
             return ""
-        elif hasattr(self.print_symbol, '__iter__'):
-            return ''.join(
-                [str(self.print_symbol) * self.width + '\n'] * self.height
-            )
+        rec_str = []
+        for col in range(self.height):
+            [rec_str.append(str(self.print_symbol)) for _ in range(self.width)]
+            rec_str.append("\n")
+        return ''.join(rec_str)
 
     def __repr__(self):
         return f"Rectangle({self.width}, {self.height})"
