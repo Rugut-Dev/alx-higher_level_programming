@@ -1,4 +1,3 @@
-"""
 >>> add_integer = __import__('0-add_integer').add_integer
 
 # Int addition
@@ -37,5 +36,3 @@
 # one arg is passed
 >>> add_integer(2.5)
 100
-
-"""
