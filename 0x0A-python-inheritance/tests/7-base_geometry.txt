@@ -6,14 +6,20 @@
 ...     bg.integer_validator("my_int", bin)
 ... except TypeError as e:
 ...     str(e)
-'<name> must be an integer'
+'my_int must be an integer'
 
 >>> try:
 ...	bg.integer_validator("Great", -5)
 ... except ValueError as e:
 ... 	str(e)
-'<name> must be greater than 0'
+'Great must be greater than 0'
 
 >>> bg.integer_validator("bin", 6)
+
+>>> try:
+...	bg.integer_validator("bin", 0)
+... except ValueError as e:
+... 	str(e)
+'bin must be greater than 0'
 
 """
