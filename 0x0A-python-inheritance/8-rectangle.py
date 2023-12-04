@@ -20,7 +20,7 @@ validates value
 class Rectangle(BaseGeometry):
     """inherits from BaseGeometry"""
     def __init__(self, width, height):
-        super().__init__
+        super().__init__()
         self.__width = width
         self.__height = height
         self.integer_validator("width", self.__width)
