@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 """script that adds all args to a python list and tehn save them to a file"""
-
-load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 import json
 import sys
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 
 try:
     with open('add_item.json', 'x') as file:
