@@ -70,10 +70,10 @@ class Rectangle(Base):
         return self.height * self.width
 
     def display(self):
-        for row in range(self.height):
-            for col in range(self.width):
-                print('#', end='')
+        for _ in range(self.y):
             print()
+        for row in range(self.height):
+            print(" " * self.x + "#" * self.width)
 
     def __str__(self):
         return (
