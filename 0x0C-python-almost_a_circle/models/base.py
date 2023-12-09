@@ -32,3 +32,10 @@ class Base:
 
         with open(file_name, 'w', encoding='utf-8') as f:
             f.write(json_str)
+
+    @staticmethod
+    def from_json_string(json_string):
+        list_obj = []
+        if json_string:
+            list_obj = json.loads(json_string)
+        return list_obj
