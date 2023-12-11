@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """The Base of all classes for the project"""
 import json
+import csv
 
 
 class Base:
@@ -65,3 +66,40 @@ class Base:
                 return [cls.create(**instance) for instance in instances]
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Defines file name"""
+        filename = cls.__name__ + ".csv"
+        with open(filename, mode='w', newline='') as f:
+            writer = csv.writer(f)
+            if list_objs is None:
+                writer.writerow([])
+            else:
+                for obj in list_objs:
+                    if cls.__name__ == 'Rectangle':
+                        writer.writerow([
+                            obj.id, obj.width, obj.height, obj.x, obj.y])
+                    elif cls.__name__ == 'Square':
+                        writer.writerow([obj.id, obj.size, obj.x, obj.y])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """loads file"""
+        file_name = cls.__name__ + ".csv"
+        objs = []
+        try:
+            with open(file_name, mode='r') as f:
+                reader = csv.reader(f)
+                for row in reader:
+                    if cls.__name__ == 'Rectangle':
+                        obj = cls(int(row[1]), int(row[2]),\
+                                  int(row[3]), int(row[4]), int(row[0]))
+                    elif cls.__name__ == 'Square':
+                        obj = cls(
+                            int(row[1]), int(row[2]), int(row[3]), int(row[0])
+                        )
+                    objs.append(obj)
+            return objs
+        except FileNotFoundError:
+            return objs
