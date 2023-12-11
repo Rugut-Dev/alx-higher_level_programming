@@ -9,16 +9,19 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        """Overrides the str method"""
         return (
             f"[Square] ({self.id}) {self.x}/{self.y} - {self.height}"
             )
 
     @property
     def size(self):
+        """size getter method"""
         return self.width
 
     @size.setter
     def size(self, val):
+        """size setter method"""
         if not isinstance(val, int):
             raise TypeError("width must be an integer")
         elif val <= 0:
@@ -28,6 +31,7 @@ class Square(Rectangle):
             self.height = val
 
     def update(self, *args, **kwargs):
+        """updates the attributes"""
         if args:
             attrs = ['id', 'size', 'x', 'y']
             for i, arg in enumerate(args[:5]):
@@ -36,4 +40,5 @@ class Square(Rectangle):
             setattr(self, key, val)
 
     def to_dictionary(self):
+        """returns dict object"""
         return {'id': self.id, 'size': self.size, 'x': self.size, 'y': self.y}
