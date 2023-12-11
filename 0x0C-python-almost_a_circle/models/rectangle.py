@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Rectangle that inherits from Base class
-"""
+"""Rectangle that inherits from Base class"""
 
 
 from models.base import Base
@@ -8,7 +7,6 @@ from models.base import Base
 
 class Rectangle(Base):
     """Initializes a Rectangle instance.
-
         Args:
             width (int): Width of the rectangle.
             height (int): Height of the rectangle.
@@ -26,13 +24,16 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """width getter
+        """width getter method
+        Ensures private instantiation
+
 """
         return self.__width
 
     @width.setter
     def width(self, val):
-        """width getter
+        """width setter method
+        sets private instance
 """
         if not isinstance(val, int):
             raise TypeError("width must be an integer")
@@ -43,12 +44,16 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """height getter"""
+        """height getter
+        gets private instance
+"""
         return self.__height
 
     @height.setter
     def height(self, val):
-        """height setter"""
+        """height setter
+        sets private instance
+"""
         if not isinstance(val, int):
             raise TypeError("height must be an integer")
         elif val <= 0:
@@ -58,12 +63,16 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """x getter"""
+        """x getter method
+        gets private instance
+"""
         return self.__x
 
     @x.setter
     def x(self, val):
-        """x setter"""
+        """x setter method
+        sets private instance
+"""
         if not isinstance(val, int):
             raise TypeError("x must be an integer")
         elif val < 0:
@@ -73,12 +82,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """y getter"""
+        """y getter method that gts private instance"""
         return self.__y
 
     @y.setter
     def y(self, val):
-        """y setter"""
+        """y setter method that gets private instance"""
         if not isinstance(val, int):
             raise TypeError("y must be an integer")
         elif val < 0:
