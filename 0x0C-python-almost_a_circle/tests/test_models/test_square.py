@@ -35,7 +35,7 @@ class TestSquare(unittest.TestCase):
         """Tests if square inherits Rect behaviour"""
         with self.assertRaises(ValueError):
             sq = Square(-5)
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             sq = Square("abcd")
         sq = Square(10)
         sq.x = 5
@@ -82,6 +82,28 @@ class TestSquare(unittest.TestCase):
 
         sqb = Square(3, 1, 3, 400)
         self.assertEqual(sqb.id, 400)
+
+    def test_size_getter(self):
+        """Checks if getter works as expected"""
+        sq = Square(5)
+        self.assertEqual(sq.size, 5)
+        sq.size = 7
+        self.assertEqual(sq.size, 7)
+
+    def test_size_setter(self):
+        """Tests the setter method"""
+        sq = Square(5)
+        sq.size = 10
+        self.assertEqual(sq.width, 10)
+        self.assertEqual(sq.height, 10)
+
+    def test_update(self):
+        """Tests update method with args and kwargs"""
+        sq = Square(5)
+        sq.update(10)
+        print(sq)
+        self.assertEqual(self.output.getvalue().strip(),
+                         '[Square] (10) 0/0 - 5')
 
     def tearDown(self):
         sys.stdout = sys.__stdout__
