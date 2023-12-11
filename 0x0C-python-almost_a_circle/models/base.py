@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""The Base of all classes for the project"""
+"""The Base of all classes for the project
 import json
+"""
 
 
 class Base:
