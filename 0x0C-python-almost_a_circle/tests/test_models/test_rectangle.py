@@ -113,5 +113,53 @@ class TestRectangle(unittest.TestCase):
         expected_output = "[Rectangle] (1) 1/0 - 5/5"
         self.assertEqual(ret_val, expected_output)
 
+    def test_display_xy(self):
+        """Tests the output as per the args"""
+        rect =  Rectangle(2, 3, 2, 2)
+        rect.display()
+
+        expected_output = "##\n  ##\n  ##"
+        printed_output = self.output.getvalue().strip()
+        self.assertEqual(printed_output, expected_output)
+
+    def test_update_method(self):
+        """Test if update method assigns arguments correctly"""
+        rect = Rectangle(1, 1, 1, 1, 1)
+        rect.update(5, 10, 15, 20, 25)
+        self.assertEqual(rect.id, 5)
+        self.assertEqual(rect.width, 10)
+        self.assertEqual(rect.height, 15)
+        self.assertEqual(rect.x, 20)
+        self.assertEqual(rect.y, 25)
+
+        rect.update(7, 12)
+        self.assertEqual(rect.id, 7)
+        self.assertEqual(rect.width, 12)
+        self.assertEqual(rect.height, 15)
+        self.assertEqual(rect.x, 20)
+        self.assertEqual(rect.y, 25)
+
+    def test_update_with_args_kwargs9(self):
+        rect = Rectangle(10, 10, 10, 10)
+        expected_output = "[Rectangle] (1) 10/10 - 10/10"
+
+        self.assertEqual(str(rect), expected_output)
+
+        rect.update(height=1)
+        expected_output = "[Rectangle] (1) 10/10 - 10/1"
+        self.assertEqual(str(rect), expected_output)
+
+        rect.update(width=1, x=2)
+        expected_output = "[Rectangle] (1) 2/10 - 1/1"
+        self.assertEqual(str(rect), expected_output)
+
+        rect.update(y=1, width=2, x=3, id=89)
+        expected_output = "[Rectangle] (89) 3/1 - 2/1"
+        self.assertEqual(str(rect), expected_output)
+
+        rect.update(x=1, height=2, y=3, width=4)
+        expected_output = "[Rectangle] (89) 1/3 - 4/2"
+        self.assertEqual(str(rect), expected_output)
+
     def tearDown(self):
         sys.stdout = sys.__stdout__
