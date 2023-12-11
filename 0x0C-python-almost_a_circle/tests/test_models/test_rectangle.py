@@ -115,7 +115,7 @@ class TestRectangle(unittest.TestCase):
 
     def test_display_xy(self):
         """Tests the output as per the args"""
-        rect =  Rectangle(2, 3, 2, 2)
+        rect = Rectangle(2, 3, 2, 2)
         rect.display()
 
         expected_output = "##\n  ##\n  ##"
