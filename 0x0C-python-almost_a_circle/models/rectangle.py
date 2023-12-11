@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 """Rectangle that inherits from Base class
-Base = __import__('base').Base
 """
 from models.base import Base
 
 
 class Rectangle(Base):
-    """Rectangle class"""
+    """Rectangle class
+"""
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Initializes a Rectangle instance."""
+        """Initializes a Rectangle instance.
+"""
         super().__init__(id)
         self.width = width
         self.height = height
@@ -17,12 +18,14 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """width getter"""
+        """width getter
+"""
         return self.__width
 
     @width.setter
     def width(self, val):
-        """width getter"""
+        """width getter
+"""
         if not isinstance(val, int):
             raise TypeError("width must be an integer")
         elif val <= 0:
