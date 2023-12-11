@@ -28,16 +28,13 @@ class Rectangle(Base):
     @property
     def width(self):
         """width getter method
-        Ensures private instantiation
-
-"""
+        Ensures private instantiation"""
         return self.__width
 
     @width.setter
     def width(self, val):
         """width setter method
-        sets private instance
-"""
+        sets private instance"""
         if not isinstance(val, int):
             raise TypeError("width must be an integer")
         elif val <= 0:
@@ -48,15 +45,13 @@ class Rectangle(Base):
     @property
     def height(self):
         """height getter
-        gets private instance
-"""
+        gets private instance"""
         return self.__height
 
     @height.setter
     def height(self, val):
         """height setter
-        sets private instance
-"""
+        sets private instance"""
         if not isinstance(val, int):
             raise TypeError("height must be an integer")
         elif val <= 0:
@@ -67,15 +62,13 @@ class Rectangle(Base):
     @property
     def x(self):
         """x getter method
-        gets private instance
-"""
+        gets private instance"""
         return self.__x
 
     @x.setter
     def x(self, val):
         """x setter method
-        sets private instance
-"""
+        sets private instance"""
         if not isinstance(val, int):
             raise TypeError("x must be an integer")
         elif val < 0:
@@ -99,21 +92,25 @@ class Rectangle(Base):
             self.__y = val
 
     def area(self):
+        """Calculates and returns the area"""
         return self.height * self.width
 
     def display(self):
+        """prints a rectangle by using #"""
         for _ in range(self.y):
             print()
         for row in range(self.height):
             print(" " * self.x + "#" * self.width)
 
     def __str__(self):
+        """Overrides the print"""
         return (
             f"[Rectangle] ({self.id})"
             f" {self.x}/{self.y} - {self.width}/{self.height}"
             )
 
     def update(self, *args, **kwargs):
+        """Updates the attributes"""
         if args:
             attrs = ['id', 'width', 'height', 'x', 'y']
             for i, arg in enumerate(args[:5]):
@@ -122,6 +119,7 @@ class Rectangle(Base):
             setattr(self, key, val)
 
     def to_dictionary(self):
+        """returns a dict objct"""
         return {
             'id': self.id, 'width': self.width, 'height': self.height,
             'x': self.x, 'y': self.y}
