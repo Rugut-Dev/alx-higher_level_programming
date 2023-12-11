@@ -161,5 +161,11 @@ class TestRectangle(unittest.TestCase):
         expected_output = "[Rectangle] (89) 1/3 - 4/2"
         self.assertEqual(str(rect), expected_output)
 
+    def test_to_dictionary(self):
+        """Tests json.loads"""
+        rect = Rectangle(5, 10, 2, 4, 1)
+        expected_output = {'id': 1, 'width': 5, 'height': 10, 'x': 2, 'y': 4}
+        self.assertEqual(rect.to_dictionary(), expected_output)
+
     def tearDown(self):
         sys.stdout = sys.__stdout__

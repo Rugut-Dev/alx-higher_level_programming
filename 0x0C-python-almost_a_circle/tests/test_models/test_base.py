@@ -30,3 +30,12 @@ class TestBaseCLass(unittest.TestCase):
     """Test if this its the super class"""
     def test_super_class(self):
         self.assertTrue(issubclass(Base, object))
+
+    def test_to_json_string(self):
+        """Tests json.dumps"""
+        data = [{"id": 1, "width": 10, "height": 5},
+                {"id": 2, "width": 7, "height": 3}]
+        ret_val = Base.to_json_string(data)
+        expected_output = '[{"id": 1, "width": 10, "height": 5},\
+ {"id": 2, "width": 7, "height": 3}]'
+        self.assertEqual(ret_val, expected_output)
