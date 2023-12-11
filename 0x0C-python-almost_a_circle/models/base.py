@@ -45,13 +45,13 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """creates an instance from **dictionary"""
-        if cls.__name__ == 'Rectangle':
-            dummy = cls(1, 1)
-        elif cls.__name__ == 'Square':
-            dummy = cls(1)
+        """creates an instance from **dictionary attrs"""
+        if cls.__name__ == "Rectangle':"
+            dummy = cls(1, 1, 0, 0)
+        if cls.__name__ == "Square":
+            dummy = cls(1, 0, 0)
 
-        dummy.update(None, **dictionary)
+        dummy.update(**dictionary)
         return dummy
 
     @classmethod
