@@ -1,20 +1,23 @@
 #!/usr/bin/python3
-"""Rectangle that inherits from Base class"""
+ """Rectangle class inheriting from Base.
+
+    Attributes:
+        width (int): Width of the rectangle.
+        height (int): Height of the rectangle.
+        x (int): x-coordinate of the rectangle.
+        y (int): y-coordinate of the rectangle.
+
+    Methods:
+        __init__(self, width, height, x=0, y=0, id=None):
+            Initializes a Rectangle instance.
+    """
 
 
 from models.base import Base
 
 
 class Rectangle(Base):
-    """Initializes a Rectangle instance.
-        Args:
-            width (int): Width of the rectangle.
-            height (int): Height of the rectangle.
-            x (int, optional): x-coordinate of the rectangle (default is 0).
-            y (int, optional): y-coordinate of the rectangle (default is 0).
-            id (int, optional): ID to assign (default is None).
-                If None, increments __nb_objects for a new unique ID.
-        """
+    """Initializes a Rectangle instance"""
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
         self.width = width
