@@ -8,6 +8,16 @@ from .base import Base
 class Rectangle(Base):
     """Rectangle class"""
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Initializes a Rectangle instance.
+
+        Args:
+            width (int): Width of the rectangle.
+            height (int): Height of the rectangle.
+            x (int, optional): x-coordinate of the rectangle (default is 0).
+            y (int, optional): y-coordinate of the rectangle (default is 0).
+            id (int, optional): ID to assign (default is None).
+                If None, increments __nb_objects for a new unique ID.
+        """
         super().__init__(id)
         self.width = width
         self.height = height
