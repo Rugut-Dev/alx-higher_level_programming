@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """class Square that inherits from Rectangle"""
-from .rectangle import Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -41,4 +41,4 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """returns dict object"""
-        return {'id': self.id, 'size': self.size, 'x': self.size, 'y': self.y}
+        return {'id': self.id, 'size': self.width, 'x': self.size, 'y': self.y}
