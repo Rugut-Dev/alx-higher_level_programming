@@ -46,7 +46,7 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """creates an instance from **dictionary attrs"""
-        if cls.__name__ == "Rectangle':"
+        if cls.__name__ == "Rectangle":
             dummy = cls(1, 1, 0, 0)
         if cls.__name__ == "Square":
             dummy = cls(1, 0, 0)
