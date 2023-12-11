@@ -1,7 +1,7 @@
 #!/usr/bin/python3
- """Rectangle class inheriting from Base.
+"""Rectangle class inheriting from Base.
+Attributes:
 
-    Attributes:
         width (int): Width of the rectangle.
         height (int): Height of the rectangle.
         x (int): x-coordinate of the rectangle.
