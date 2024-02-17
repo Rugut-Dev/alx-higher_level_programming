@@ -20,7 +20,8 @@ if __name__ == '__main__':
         csr.execute("""
             SELECT * FROM states WHERE name LIKE BINARY %(name)s \
 ORDER BY states.id ASC""", {'name': argv[4]})
-    rows = csr.fetchall()
+
+        rows = csr.fetchall()
 
     for row in rows:
         print(row)
