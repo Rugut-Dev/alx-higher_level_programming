@@ -23,5 +23,5 @@ if __name__ == '__main__':
 
         rows = csr.fetchall()
 
-    if rows:
+    if rows is not None:
         print(", ".join([row[1] for row in rows]))
