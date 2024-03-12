@@ -10,7 +10,7 @@ import sys
 def search_user():
     letter = "" if len(sys.argv) == 1 else sys.argv[1]
     url = "http://0.0.0.0:5000/search_user"
-    data = {'q':letter}
+    data = {'q': letter}
 
     response = requests.post(url, data=data)
     try:

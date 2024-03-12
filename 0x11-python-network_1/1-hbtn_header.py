@@ -11,5 +11,6 @@ def get_req_id():
     with urllib.request.urlopen(req) as response:
         print(dict(response.headers).get("X-Request-Id"))
 
+
 if __name__ == "__main__":
     get_req_id()
