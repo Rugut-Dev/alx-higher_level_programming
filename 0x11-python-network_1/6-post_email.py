@@ -10,7 +10,7 @@ import sys
 def send_post_request():
     url = sys.argv[1]
     email = sys.argv[2]
-    data = {'email': email)
+    data = {'email': email}
     response = requests.post(url, data=data)
 
     print(response_text)
