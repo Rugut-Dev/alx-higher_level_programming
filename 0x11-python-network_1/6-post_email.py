@@ -7,6 +7,7 @@ and finally displays the body of the response.
 import requests
 import sys
 
+
 def send_post_request():
     url = sys.argv[1]
     email = sys.argv[2]
@@ -14,6 +15,7 @@ def send_post_request():
     response = requests.post(url, data=data)
 
     print(response.text)
+
 
 if __name__ == "__main__":
     send_post_request()
