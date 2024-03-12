@@ -13,7 +13,7 @@ def send_post_request():
     data = {'email': email}
     response = requests.post(url, data=data)
 
-    print(response)
+    print(response.text)
 
 if __name__ == "__main__":
     send_post_request()
